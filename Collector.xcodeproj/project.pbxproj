@@ -13,6 +13,7 @@
 		C22A862520A38E12006D408E /* Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C22A862320A38E12006D408E /* Collector.xcdatamodeld */; };
 		C22A862720A38E12006D408E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22A862620A38E12006D408E /* Assets.xcassets */; };
 		C22A862A20A38E12006D408E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22A862820A38E12006D408E /* LaunchScreen.storyboard */; };
+		C22A863220A39674006D408E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A863120A39674006D408E /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C22A862620A38E12006D408E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C22A862920A38E12006D408E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C22A862B20A38E12006D408E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C22A863120A39674006D408E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C22A861C20A38E12006D408E /* AppDelegate.swift */,
 				C22A861E20A38E12006D408E /* ViewController.swift */,
+				C22A863120A39674006D408E /* GameViewController.swift */,
 				C22A862020A38E12006D408E /* Main.storyboard */,
 				C22A862620A38E12006D408E /* Assets.xcassets */,
 				C22A862820A38E12006D408E /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22A863220A39674006D408E /* GameViewController.swift in Sources */,
 				C22A862520A38E12006D408E /* Collector.xcdatamodeld in Sources */,
 				C22A861F20A38E12006D408E /* ViewController.swift in Sources */,
 				C22A861D20A38E12006D408E /* AppDelegate.swift in Sources */,
