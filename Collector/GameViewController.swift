@@ -34,11 +34,17 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
 
     @IBAction func addTapped(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let game = Game(context: context)
-        game.title = titleTextfield.text
-        game.image = UIImagePNGRepresentation(gameImageView.image!) as NSData?
+        if game != nil {
+            game!.title = titleTextfield.text
+            game!.image = UIImagePNGRepresentation(gameImageView.image!) as NSData?
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+            let game = Game(context: context)
+            game.title = titleTextfield.text
+            game.image = UIImagePNGRepresentation(gameImageView.image!) as NSData?
+        }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
@@ -54,6 +60,17 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(game!)
+ 
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+    }
+
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
